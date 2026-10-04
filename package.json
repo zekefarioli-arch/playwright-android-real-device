@@ -1,0 +1,21 @@
+{
+  "name": "mobile-web-tests",
+  "version": "1.0.0",
+  "description": "Playwright tests on Chrome of a USB-connected Android phone",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "report": "playwright show-report",
+    "site": "node site/server.js",
+    "phone": "scrcpy --window-title Phone"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  },
+  "private": true
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mobile demo</title>
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; background: #1e1e2e; color: #cdd6f4; }
+    main { max-width: 420px; margin: 0 auto; padding: 24px 16px; }
+    h1 { color: #f5c2e7; font-size: 1.6rem; }
+    label { display: block; margin: 16px 0 6px; }
+    input { width: 100%; box-sizing: border-box; padding: 12px; border-radius: 10px;
+            border: 2px solid #313244; background: #181825; color: inherit; font-size: 1rem; }
+    button { margin-top: 16px; width: 100%; padding: 14px; border: 0; border-radius: 10px;
+             background: #f5c2e7; color: #11111b; font-size: 1rem; font-weight: 700; }
+    #greeting { margin-top: 20px; font-size: 1.2rem; min-height: 1.5em; }
+    .menu-desktop { display: none; }
+    @media (min-width: 768px) { .menu-desktop { display: block; } .menu-mobile { display: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Mobile demo</h1>
+    <nav class="menu-mobile" data-testid="menu-mobile">☰ Menu</nav>
+    <nav class="menu-desktop" data-testid="menu-desktop">Home · About · Contact</nav>
+    <form id="hello">
+      <label for="name">Your name</label>
+      <input id="name" name="name" autocomplete="off" required>
+      <button type="submit">Say hi</button>
+    </form>
+    <p id="greeting" role="status"></p>
+  </main>
+  <script>
+    document.getElementById('hello').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      document.getElementById('greeting').textContent = `Hi, ${name}! 👋`;
+    });
+  </script>
+</body>
+</html>
