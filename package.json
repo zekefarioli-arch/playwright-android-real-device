@@ -1,7 +1,7 @@
 {
-  "name": "mobile-web-tests",
+  "name": "playwright-android-real-device",
   "version": "1.0.0",
-  "description": "Playwright tests on Chrome of a USB-connected Android phone",
+  "description": "Playwright end-to-end tests on Chrome of a real Android phone over USB (adb + CDP)",
   "directories": {
     "test": "tests"
   },
@@ -11,11 +11,24 @@
     "site": "node site/server.js",
     "phone": "scrcpy --window-title Phone"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "playwright",
+    "android",
+    "adb",
+    "e2e",
+    "testing",
+    "real-device",
+    "chrome",
+    "cdp"
+  ],
+  "author": "Ezequiel Farioli",
+  "license": "MIT",
   "devDependencies": {
     "@playwright/test": "^1.63.0"
   },
-  "private": true
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zekefarioli-arch/playwright-android-real-device.git"
+  }
 }
